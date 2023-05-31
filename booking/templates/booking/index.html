@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theater Booking</title>
+</head>
+<body>
+    <h1>Welcome to Theater Booking</h1>
+    <p>Select a theater to make a reservation:</p>
+    <ul>
+        {% for theater in theaters %}
+            <li><a href="/booking/theaters/{{ theater.theater_id }}/">{{ theater.theater_name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

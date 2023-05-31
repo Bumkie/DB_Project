@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theater Reservation</title>
+</head>
+<body>
+    <h1>Reservation for {{ theater.theater_name }}</h1>
+    <form action="/booking/theaters/{{ theater.theater_id }}/reservation/" method="post">
+        {% csrf_token %}
+        <p>Date: <input type="date" name="date"></p>
+        <p>Time: <input type="text" name="time"></p>
+        <p>Number of seats: <input type="number" name="seats"></p>
+        <input type="submit" value="Make Reservation">
+    </form>
+</body>
+</html>

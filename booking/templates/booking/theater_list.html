@@ -1,0 +1,10 @@
+<h1>연극 목록</h1>
+<ul>
+{% for theater in theaters %}
+    <li>{{ theater.theater_name }} - {{ theater.theater_genre }}</li>
+{% endfor %}
+<p>
+  <a href="{% url 'booking:create_booking' %}" class="btn btn-primary">예매하기</a>
+  <a href="{% url 'booking:check_booking' %}" class="btn btn-secondary">예매조회</a>
+</p>
+</ul>
